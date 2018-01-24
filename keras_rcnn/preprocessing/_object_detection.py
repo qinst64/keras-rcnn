@@ -147,5 +147,5 @@ class DictionaryIterator(keras.preprocessing.image.Iterator):
 
 
 class ObjectDetectionGenerator:
-    def flow(self, dictionary, classes, target_shape=None, scale=None, ox=None, oy=None, batch_size=1, shuffle=True, seed=None):
+    def flow(self, dictionary, classes, target_shape=None, scale=1, ox=None, oy=None, batch_size=1, shuffle=True, seed=None):
         return DictionaryIterator(dictionary, classes, self, target_shape, scale, ox, oy, batch_size, shuffle, seed)
